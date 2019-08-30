@@ -1,14 +1,26 @@
 package vn.sun.music_68.ui.main;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import vn.sun.music_68.R;
+import vn.sun.music_68.base.BaseActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    protected int getLayoutResourceId() {
+        return R.layout.activity_main;
     }
+
+    @Override
+    protected void initViews(Bundle savedInstanceState) {
+
+    }
+
+    public static Intent getIntent (Context context) {
+        Intent intent = new Intent(context, MainActivity.class);
+        return intent;
+    }
+
 }
