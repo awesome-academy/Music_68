@@ -7,16 +7,4 @@
     <color name="color_white">#FFFFFF</color>
     <color name="light_blue_a700">#0091EA</color>
     <color name="color_fun_blue_200">#3498DB</color>
-    <color name="color_fun_blue">#2F4B8A</color>
-    <color name="color_black">#000000</color>
-    <color name="color_brown_200">#BCAAA4</color>
-    <color name="color_free_speech_blue">#4267BB</color>
-    <color name="color_panache_green">#f1f8e9</color>
-    <color name="color_solitude_blue">#ECF0F1</color>
-    <!-- Screens background color-->
-    <color name="color_french_rose_red">#f64c73</color>
-    <color name="color_light_sea_green">#20d2bb</color>
-    <color name="color_dodger_blue">#3395ff</color>
-    <color name="color_heliotrope_violet">#c873f4</color>
-    <color name="color_cornflower_blue">#6495ED</color>
 </resources>
