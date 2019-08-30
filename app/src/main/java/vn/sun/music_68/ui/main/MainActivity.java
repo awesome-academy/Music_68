@@ -1,8 +1,8 @@
-package com.example.musi_68;
+package vn.sun.music_68.ui.main;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+import vn.sun.music_68.R;
 
 public class MainActivity extends AppCompatActivity {
 
