@@ -1,4 +1,4 @@
-package com.example.musi_68;
+package vn.sun.music_68;
 
 import org.junit.Test;
 
