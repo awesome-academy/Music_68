@@ -22,7 +22,6 @@ public class MainActivity extends BaseActivity {
     private TabLayout mTabLayout;
     private ViewPager mViewPager;
     private List<Fragment> mFragments;
-    HomePagerAdapter mHomePagerAdapter;
 
     @Override
     protected int getLayoutResourceId() {
@@ -33,14 +32,13 @@ public class MainActivity extends BaseActivity {
     protected void initViews(Bundle savedInstanceState) {
         mTabLayout = findViewById(R.id.tab_layout);
         mViewPager = findViewById(R.id.view_pager);
-        mHomePagerAdapter = new HomePagerAdapter(this, getSupportFragmentManager());
-        mViewPager.setAdapter(mHomePagerAdapter);
-        mTabLayout.setupWithViewPager(mViewPager);
-
         mFragments = new ArrayList<>();
         mFragments.add(MyMusicFragment.getInstance());
         mFragments.add(RecommendFragment.getInstance());
-        mHomePagerAdapter.submitData(mFragments);
+        HomePagerAdapter adapter = new HomePagerAdapter(this, getSupportFragmentManager());
+        adapter.submitData(mFragments);
+        mViewPager.setAdapter(adapter);
+        mTabLayout.setupWithViewPager(mViewPager);
     }
 
     public static Intent getIntent(Context context) {

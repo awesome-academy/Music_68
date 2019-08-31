@@ -7,4 +7,5 @@
     <color name="color_white">#FFFFFF</color>
     <color name="light_blue_a700">#0091EA</color>
     <color name="color_fun_blue_200">#3498DB</color>
+    <color name="color_black">#000000</color>
 </resources>
