@@ -4,4 +4,12 @@
     <string name="title_recommend">Recommend</string>
     <string name="hint_text_search">Search music …</string>
     <string name="title_song_name">Name Song</string>
+    <string name="titile_new_release">New Realse</string>
+    <string name="titile_show_all">Show all</string>
+    <string name="titile_genres">Genres</string>
+    <string name="tittle_genres">Name of Genres</string>
+    <string name="tittle_descreption_genres">descreption</string>
+    <string name="tittle_play">PLAY</string>
+    <string name="string_exam_curenttime">0:00</string>
+    <string name="string_exam_durationtime">4:32</string>
 </resources>
