@@ -14,9 +14,8 @@ import vn.sun.music_68.R;
 import vn.sun.music_68.utils.NavigationMode;
 
 public class HomePagerAdapter extends FragmentPagerAdapter {
-    private final int NUMBER_PAGE = 2;
     private Context mContext;
-    private List<Fragment> mFragments = new ArrayList();
+    private List<Fragment> mFragments = new ArrayList<>();
 
     public HomePagerAdapter(Context context, FragmentManager fm) {
         super(fm);

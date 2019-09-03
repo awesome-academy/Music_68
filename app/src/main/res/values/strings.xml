@@ -2,4 +2,6 @@
     <string name="app_name">Music_68</string>
     <string name="title_my_music">My Music</string>
     <string name="title_recommend">Recommend</string>
+    <string name="hint_text_search">Search music …</string>
+    <string name="title_song_name">Name Song</string>
 </resources>

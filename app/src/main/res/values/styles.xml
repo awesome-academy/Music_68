@@ -10,6 +10,4 @@
         <item name="android:windowBackground">@drawable/background_splashscreen</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
 </resources>

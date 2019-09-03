@@ -21,7 +21,8 @@ public class RecommendFragment extends BaseFragment {
     protected void initView(View view, Bundle savedInstanceState) {
 
     }
-    public static RecommendFragment getInstance(){
+
+    public static RecommendFragment getInstance() {
         RecommendFragment recommendFragment = new RecommendFragment();
         return recommendFragment;
     }
