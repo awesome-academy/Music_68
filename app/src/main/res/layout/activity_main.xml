@@ -15,7 +15,6 @@
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:titleTextColor="@color/color_gray_500" />
@@ -27,8 +26,7 @@
         android:src="@drawable/ic_search_black_24dp"
         app:layout_constraintBottom_toBottomOf="@+id/text_search"
         app:layout_constraintStart_toStartOf="@+id/text_search"
-        app:layout_constraintTop_toTopOf="@+id/text_search"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="@+id/text_search" />
 
     <TextView
         android:id="@+id/text_search"
@@ -46,10 +44,8 @@
         android:textSize="@dimen/sp_20"
         app:layout_constraintBottom_toTopOf="@id/tab_layout"
         app:layout_constraintEnd_toEndOf="@+id/tool_bar"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/tool_bar"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/view_pager"
@@ -66,7 +62,6 @@
         android:layout_height="wrap_content"
         android:background="@color/color_fun_blue_200"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tool_bar"
         app:layout_scrollFlags="scroll|enterAlways"
