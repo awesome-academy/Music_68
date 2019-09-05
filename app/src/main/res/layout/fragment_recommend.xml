@@ -8,58 +8,61 @@
     tools:context=".ui.home.recommend.RecommendFragment">
 
     <TextView
-        android:id="@+id/text_new_realse"
-        android:layout_width="0dp"
+        android:id="@+id/text_title_new"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp_16"
         android:layout_marginLeft="@dimen/dp_16"
         android:layout_marginTop="@dimen/dp_16"
         android:layout_marginBottom="@dimen/dp_10"
-        android:text="@string/titile_new_release"
+        android:text="@string/title_new_release"
         android:textColor="@color/color_black"
-        android:textSize="@dimen/sp_16"
         app:layout_constraintBottom_toTopOf="@+id/divider_top"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/text_show_all"
+        android:id="@+id/text_show_new"
+        style="@style/TextAppearance.AppCompat.Medium"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/dp_12"
-        android:layout_marginRight="@dimen/dp_12"
-        android:text="@string/titile_show_all"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:text="@string/title_show_all"
         android:textColor="@color/color_fun_blue_200"
-        android:textSize="@dimen/sp_14"
-        app:layout_constraintBottom_toBottomOf="@+id/text_new_realse"
+        app:layout_constraintBottom_toTopOf="@+id/divider_top"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/text_new_realse" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/text_genres"
+        android:id="@+id/text_title_genres"
+        style="@style/TextAppearance.AppCompat.Large"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp_16"
         android:layout_marginLeft="@dimen/dp_16"
-        android:layout_marginTop="@dimen/dp_20"
-        android:text="@string/titile_genres"
+        android:layout_marginTop="@dimen/dp_16"
+        android:text="@string/title_genres_name"
         android:textColor="@color/color_black"
-        android:textSize="@dimen/sp_16"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider_center" />
 
     <TextView
-        android:id="@+id/text_show_all_genres"
+        android:id="@+id/text_show_genres"
+        style="@style/TextAppearance.AppCompat.Medium"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/dp_12"
-        android:layout_marginRight="@dimen/dp_12"
-        android:text="@string/titile_show_all"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:text="@string/title_show_all"
         android:textColor="@color/color_fun_blue_200"
-        android:textSize="@dimen/sp_14"
-        app:layout_constraintBottom_toBottomOf="@+id/text_genres"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/text_genres" />
+        app:layout_constraintTop_toBottomOf="@+id/divider_center" />
 
     <View
         android:id="@+id/divider_top"
@@ -68,12 +71,12 @@
         android:layout_marginStart="@dimen/dp_16"
         android:layout_marginLeft="@dimen/dp_16"
         android:layout_marginTop="@dimen/dp_10"
-        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_16"
         android:layout_marginRight="@dimen/dp_16"
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_new_realse" />
+        app:layout_constraintTop_toBottomOf="@+id/text_title_new" />
 
     <View
         android:id="@+id/divider_center"
@@ -111,7 +114,7 @@
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_show_all_genres"
+        app:layout_constraintTop_toBottomOf="@+id/text_show_genres"
         app:spanCount="1"
         tools:listitem="@layout/item_genres" />
 
