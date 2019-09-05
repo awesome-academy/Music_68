@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".ui.main.MainActivity">
+    tools:context=".ui.home.MainActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/tool_bar"
@@ -18,6 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:titleTextColor="@color/color_gray_500" />
+
     <ImageView
         android:id="@+id/image_search"
         android:layout_width="@dimen/dp_50"
@@ -30,6 +31,7 @@
 
     <TextView
         android:id="@+id/text_search"
+        style="@style/TextAppearance.AppCompat.Large"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="@dimen/dp_8"
@@ -40,8 +42,6 @@
         android:layout_marginBottom="@dimen/dp_8"
         android:background="@drawable/custom_textview_border"
         android:gravity="fill_vertical"
-        android:hint="@string/hint_text_search"
-        android:textSize="@dimen/sp_20"
         app:layout_constraintBottom_toTopOf="@id/tab_layout"
         app:layout_constraintEnd_toEndOf="@+id/tool_bar"
         app:layout_constraintStart_toStartOf="@+id/tool_bar"

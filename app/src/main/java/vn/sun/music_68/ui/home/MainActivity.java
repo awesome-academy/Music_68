@@ -1,4 +1,4 @@
-package vn.sun.music_68.ui.main;
+package vn.sun.music_68.ui.home;
 
 import android.content.Context;
 import android.content.Intent;

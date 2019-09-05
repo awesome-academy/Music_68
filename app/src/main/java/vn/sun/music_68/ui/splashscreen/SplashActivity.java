@@ -3,7 +3,7 @@ package vn.sun.music_68.ui.splashscreen;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import vn.sun.music_68.ui.main.MainActivity;
+import vn.sun.music_68.ui.home.MainActivity;
 
 public class SplashActivity extends AppCompatActivity {
 

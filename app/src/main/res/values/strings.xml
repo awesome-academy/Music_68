@@ -2,14 +2,15 @@
     <string name="app_name">Music_68</string>
     <string name="title_my_music">My Music</string>
     <string name="title_recommend">Recommend</string>
-    <string name="hint_text_search">Search music …</string>
     <string name="title_song_name">Name Song</string>
-    <string name="titile_new_release">New Realse</string>
-    <string name="titile_show_all">Show all</string>
-    <string name="titile_genres">Genres</string>
-    <string name="tittle_genres">Name of Genres</string>
-    <string name="tittle_descreption_genres">descreption</string>
-    <string name="tittle_play">PLAY</string>
-    <string name="string_exam_curenttime">0:00</string>
-    <string name="string_exam_durationtime">4:32</string>
+    <string name="title_new_release">New Realse</string>
+    <string name="title_show_all">Show all</string>
+    <string name="title_genres">Name of Genres</string>
+    <string name="title_description_genres">description</string>
+    <string name="title_play">PLAY</string>
+    <string name="string_add_mymusic">Add to my music</string>
+    <string name="string_add_playlist">Add to playlist</string>
+    <string name="string_play_next">Play next</string>
+    <string name="title_up_next">Up next</string>
+    <string name="title_genres_name">Genres</string>
 </resources>
