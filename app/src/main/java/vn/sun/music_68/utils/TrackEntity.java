@@ -14,7 +14,11 @@ import java.lang.annotation.RetentionPolicy;
         TrackEntity.TITLE,
         TrackEntity.PUBLISHER_METADATA,
         TrackEntity.STREAMABLE,
-        TrackEntity.PLAYBACK_COUNT
+        TrackEntity.PLAYBACK_COUNT,
+        TrackEntity.COLLECTION,
+        TrackEntity.KEY_USER_USERNAME,
+        TrackEntity.KEY_USER,
+        TrackEntity.TRACK,
 })
 @Retention(RetentionPolicy.SOURCE)
 public @interface TrackEntity {
@@ -28,4 +32,8 @@ public @interface TrackEntity {
     String PUBLISHER_METADATA = "publisher_metadata";
     String STREAMABLE = "streamable";
     String PLAYBACK_COUNT = "playback_count";
+    String COLLECTION = "collection";
+    String KEY_USER_USERNAME = "username";
+    String KEY_USER = "user";
+    String TRACK = "track";
 }
