@@ -3,6 +3,8 @@ package vn.sun.music_68.data.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import org.json.JSONObject;
+
 public class Track implements Parcelable {
     private int mId;
     private String mTitle;
@@ -23,12 +25,12 @@ public class Track implements Parcelable {
         mId = id;
     }
 
-    public String getTitile() {
+    public String getTitle() {
         return mTitle;
     }
 
-    public void setTitile(String titile) {
-        mTitle = titile;
+    public void setTitle(String title) {
+        mTitle = title;
     }
 
     public int getDuration() {
@@ -112,10 +114,11 @@ public class Track implements Parcelable {
         mArtworkUrl = in.readString();
     }
 
-    public Track(int id, String titile, String artist) {
+    public Track(int id, String title, String artist, String artworkUrl) {
         mId = id;
-        mTitle = titile;
+        mTitle = title;
         mArtist = artist;
+        mArtworkUrl = artworkUrl;
     }
 
     public static final Creator<Track> CREATOR = new Creator<Track>() {

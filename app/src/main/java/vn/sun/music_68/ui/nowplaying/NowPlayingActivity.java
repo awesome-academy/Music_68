@@ -11,6 +11,7 @@ import java.util.List;
 
 import vn.sun.music_68.R;
 import vn.sun.music_68.base.BaseActivity;
+import vn.sun.music_68.ui.adapter.PlayPagerAdapter;
 
 public class NowPlayingActivity extends BaseActivity {
     private View mView;
@@ -29,7 +30,7 @@ public class NowPlayingActivity extends BaseActivity {
         mFragments = new ArrayList<>();
         mFragments.add(FragmentMainPlaying.getInstance());
         mFragments.add(FragmentPlayingList.getInstance());
-        PlayPagerAdapter adapter = new PlayPagerAdapter(getSupportFragmentManager());
+        PlayPagerAdapter adapter = new PlayPagerAdapter(this, getSupportFragmentManager());
         adapter.submitData(mFragments);
         mViewPager.setAdapter(adapter);
     }

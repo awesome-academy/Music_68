@@ -1,4 +1,4 @@
-package vn.sun.music_68.ui.adapter;
+package vn.sun.music_68.ui.home.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -13,20 +13,21 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import vn.sun.music_68.R;
 import vn.sun.music_68.base.BaseRecyclerViewAdapter;
 import vn.sun.music_68.data.model.Track;
 
-public class TrackAdapter extends BaseRecyclerViewAdapter<Track, TrackAdapter.ViewHolder> {
+public class NewReleaseAdapter extends BaseRecyclerViewAdapter<Track, NewReleaseAdapter.ViewHolder> {
     private List<Track> mTracks;
     private LayoutInflater mLayoutInflater;
-    private TrackClickListener mListener;
+    private TrackRealesListener mListener;
 
-    public TrackAdapter(Context context, List<Track> tracks) {
+    public NewReleaseAdapter(Context context, List<Track> tracks) {
+        mTracks = new ArrayList<>();
         mLayoutInflater = LayoutInflater.from(context);
-        mTracks = tracks;
     }
 
     public void addTrack(List<Track> tracks) {
@@ -36,10 +37,11 @@ public class TrackAdapter extends BaseRecyclerViewAdapter<Track, TrackAdapter.Vi
             notifyDataSetChanged();
         }
     }
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = mLayoutInflater.inflate(R.layout.item_playing_list, parent, false);
+        View view = mLayoutInflater.inflate(R.layout.item_new_release, parent, false);
         return new ViewHolder(view, mListener);
     }
 
@@ -53,12 +55,12 @@ public class TrackAdapter extends BaseRecyclerViewAdapter<Track, TrackAdapter.Vi
         return (mTracks != null) ? mTracks.size() : 0;
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private ImageView mTrackImage;
         private TextView mTextArtistName;
         private TextView mTextTrackName;
 
-        public ViewHolder(@NonNull View itemView, TrackClickListener listener) {
+        private ViewHolder(@NonNull View itemView, TrackRealesListener listener) {
             super(itemView);
             mTrackImage = itemView.findViewById(R.id.image_artwork);
             mTextArtistName = itemView.findViewById(R.id.text_artist);
@@ -73,9 +75,14 @@ public class TrackAdapter extends BaseRecyclerViewAdapter<Track, TrackAdapter.Vi
             mTextArtistName.setText(track.getArtist());
             mTextTrackName.setText(track.getTitle());
         }
+
+        @Override
+        public void onClick(View v) {
+
+        }
     }
 
-    public interface TrackClickListener {
+    public interface TrackRealesListener {
         void onItemClickListener(int position);
     }
 }

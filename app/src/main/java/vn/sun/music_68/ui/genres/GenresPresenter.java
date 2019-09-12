@@ -10,7 +10,7 @@ public class GenresPresenter implements GenresContract.Presenter {
     private GenresContract.View mView;
     private TrackRepository mRepository;
 
-    public GenresPresenter(GenresContract.View view, TrackRepository repository) {
+    public GenresPresenter(TrackRepository repository, GenresContract.View view) {
         mView = view;
         mRepository = repository;
     }

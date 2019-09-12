@@ -14,8 +14,8 @@ import vn.sun.music_68.data.source.TrackDataSource;
 import vn.sun.music_68.utils.Constants;
 
 public abstract class BaseAsyncTask<T> extends AsyncTask<String, T, List<T>> {
-    public TrackDataSource.DataCallback<T> mCallback;
-    public Exception mException;
+    protected TrackDataSource.DataCallback<T> mCallback;
+    protected Exception mException;
     private HttpURLConnection mURLConnection;
 
     public BaseAsyncTask(TrackDataSource.DataCallback<T> callback) {
@@ -39,6 +39,7 @@ public abstract class BaseAsyncTask<T> extends AsyncTask<String, T, List<T>> {
         }
         return convertJSON(respond);
     }
+
     @Override
     protected void onPostExecute(List<T> ts) {
         super.onPostExecute(ts);
