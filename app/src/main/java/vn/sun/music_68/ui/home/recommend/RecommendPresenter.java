@@ -6,7 +6,7 @@ import vn.sun.music_68.data.model.Track;
 import vn.sun.music_68.data.repository.TrackRepository;
 import vn.sun.music_68.data.source.TrackDataSource;
 
-public class RecommendPresenter implements RecommendContract.Presenter{
+public class RecommendPresenter implements RecommendContract.Presenter {
     private RecommendContract.View mView;
     private TrackRepository mRepository;
 
@@ -19,14 +19,15 @@ public class RecommendPresenter implements RecommendContract.Presenter{
     public void getTrack(String api) {
         mRepository.getTracks(api, new TrackDataSource.DataCallback<Track>() {
             @Override
-            public void onSuccess(List<Track> datas) {
-
+            public void onSuccess(List<Track> data) {
+                mView.onShowTrack(data);
             }
 
             @Override
             public void onFailure(String message) {
-
+                mView.onLoadFail(message);
             }
         });
     }
+
 }

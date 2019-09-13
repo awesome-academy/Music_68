@@ -22,15 +22,16 @@ public class TrackAsyncTask extends BaseAsyncTask<Track> {
         List<Track> trackList = new ArrayList<>();
         try {
             JSONObject result = new JSONObject(jsonString);
-            JSONArray collection = new JSONArray(TrackEntity.COLLECTION);
+            JSONArray collection = result.getJSONArray(TrackEntity.COLLECTION);
             for (int index = 0; index < collection.length(); index++) {
                 JSONObject trackInfo = collection.getJSONObject(index);
                 JSONObject track = trackInfo.getJSONObject(TrackEntity.TRACK);
                 String title = track.getString(TrackEntity.TITLE);
+                boolean isDownloadable = track.getBoolean(TrackEntity.DOWNLOADABLE);
                 String artworkUrl = track.getString(TrackEntity.ARTWORK_URL);
                 int id = track.getInt(TrackEntity.ID);
                 String trackArtist = track.getJSONObject(TrackEntity.KEY_USER).getString(TrackEntity.KEY_USER_USERNAME);
-                Track object = new Track(id, title, trackArtist);
+                Track object = new Track(id, title, trackArtist, artworkUrl);
                 trackList.add(object);
             }
         } catch (JSONException e) {

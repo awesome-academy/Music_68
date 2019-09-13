@@ -10,6 +10,7 @@ import vn.sun.music_68.base.BaseFragment;
 
 public class FragmentMainPlaying extends BaseFragment {
 
+
     @Override
     protected int getLayoutId() {
         return R.layout.fragment_main_playing;

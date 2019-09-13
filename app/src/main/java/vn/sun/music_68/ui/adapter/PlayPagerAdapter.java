@@ -1,4 +1,4 @@
-package vn.sun.music_68.ui.nowplaying;
+package vn.sun.music_68.ui.adapter;
 
 import android.content.Context;
 
@@ -10,10 +10,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PlayPagerAdapter extends FragmentPagerAdapter {
+    private Context mContext;
     private List<Fragment> mFragments = new ArrayList<>();
 
-    public PlayPagerAdapter(FragmentManager fm) {
+    public PlayPagerAdapter(Context context, FragmentManager fm) {
         super(fm);
+        this.mContext = context;
     }
 
     public void submitData(List<Fragment> fragments) {

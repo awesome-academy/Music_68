@@ -6,7 +6,7 @@ import vn.sun.music_68.data.model.Track;
 
 public class RecommendContract {
     interface View {
-        void onLoadSuccess(List<Track> tracks);
+        void onShowTrack(List<Track> track);
 
         void onLoadFail(String message);
     }

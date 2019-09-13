@@ -74,6 +74,8 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_music"
         android:layout_width="0dp"
+        android:orientation="vertical"
+        app:reverseLayout="false"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_16"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"

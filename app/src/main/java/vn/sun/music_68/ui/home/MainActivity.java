@@ -34,7 +34,7 @@ public class MainActivity extends BaseActivity {
         mViewPager = findViewById(R.id.view_pager);
         mFragments = new ArrayList<>();
         mFragments.add(MyMusicFragment.getInstance());
-        mFragments.add(RecommendFragment.getInstance());
+        mFragments.add(RecommendFragment.newInstance());
         HomePagerAdapter adapter = new HomePagerAdapter(this, getSupportFragmentManager());
         adapter.submitData(mFragments);
         mViewPager.setAdapter(adapter);

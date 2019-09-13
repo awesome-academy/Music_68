@@ -53,14 +53,14 @@ public class GenreAdapter extends BaseRecyclerViewAdapter<Track, GenreAdapter.Vi
         private GenreClickListener mListener;
         private Genres mGenres;
 
-        public ViewHolder(@NonNull View itemView, GenreClickListener listener) {
+        private ViewHolder(@NonNull View itemView, GenreClickListener listener) {
             super(itemView);
             mListener = listener;
-            initView();
             itemView.setOnClickListener(this);
+            initView();
         }
 
-        public void initView() {
+        private void initView() {
             mGenreImage = itemView.findViewById(R.id.image_artwork);
             mGenreName = itemView.findViewById(R.id.text_artist);
         }
@@ -70,13 +70,14 @@ public class GenreAdapter extends BaseRecyclerViewAdapter<Track, GenreAdapter.Vi
             mListener.onItemClickListener(mGenres);
         }
 
-        public void bindData(Genres genres) {
+        private void bindData(Genres genres) {
             Glide.with(itemView.getContext())
                     .load(genres.getPhoto())
                     .centerCrop()
                     .placeholder(R.drawable.genres_all_audio)
                     .into(mGenreImage);
             mGenreName.setText(genres.getName());
+            mGenres = genres;
         }
     }
 
