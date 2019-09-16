@@ -36,6 +36,7 @@ public class TrackAdapter extends BaseRecyclerViewAdapter<Track, TrackAdapter.Vi
             notifyDataSetChanged();
         }
     }
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

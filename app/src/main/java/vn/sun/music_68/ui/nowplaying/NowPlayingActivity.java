@@ -30,7 +30,7 @@ public class NowPlayingActivity extends BaseActivity {
         mFragments = new ArrayList<>();
         mFragments.add(FragmentMainPlaying.getInstance());
         mFragments.add(FragmentPlayingList.getInstance());
-        PlayPagerAdapter adapter = new PlayPagerAdapter(this, getSupportFragmentManager());
+        PlayPagerAdapter adapter = new PlayPagerAdapter( getSupportFragmentManager());
         adapter.submitData(mFragments);
         mViewPager.setAdapter(adapter);
     }

@@ -98,8 +98,7 @@ public class RecommendFragment extends BaseFragment implements GenreAdapter.Genr
 
     @Override
     public void onItemClickListener(Genres genres) {
-        Intent intent = GenresActivity.getIntent(getActivity());
-        intent.putExtra(Constants.EXTRA_GENRES, genres);
+        Intent intent = GenresActivity.getIntent(getActivity(), genres);
         startActivity(intent);
         Toast.makeText(getActivity(), genres.getName(), Toast.LENGTH_SHORT).show();
     }

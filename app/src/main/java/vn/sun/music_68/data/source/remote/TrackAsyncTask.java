@@ -1,5 +1,7 @@
 package vn.sun.music_68.data.source.remote;
 
+import android.util.Log;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -25,14 +27,9 @@ public class TrackAsyncTask extends BaseAsyncTask<Track> {
             JSONArray collection = result.getJSONArray(TrackEntity.COLLECTION);
             for (int index = 0; index < collection.length(); index++) {
                 JSONObject trackInfo = collection.getJSONObject(index);
-                JSONObject track = trackInfo.getJSONObject(TrackEntity.TRACK);
-                String title = track.getString(TrackEntity.TITLE);
-                boolean isDownloadable = track.getBoolean(TrackEntity.DOWNLOADABLE);
-                String artworkUrl = track.getString(TrackEntity.ARTWORK_URL);
-                int id = track.getInt(TrackEntity.ID);
-                String trackArtist = track.getJSONObject(TrackEntity.KEY_USER).getString(TrackEntity.KEY_USER_USERNAME);
-                Track object = new Track(id, title, trackArtist, artworkUrl);
-                trackList.add(object);
+                JSONObject trackJson = trackInfo.getJSONObject(TrackEntity.TRACK);
+                Track track = new Track(trackJson);
+                trackList.add(track);
             }
         } catch (JSONException e) {
             mException = e;
