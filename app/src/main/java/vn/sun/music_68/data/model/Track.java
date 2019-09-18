@@ -3,7 +3,11 @@ package vn.sun.music_68.data.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import org.json.JSONException;
 import org.json.JSONObject;
+
+import vn.sun.music_68.utils.StringUtils;
+import vn.sun.music_68.utils.TrackEntity;
 
 public class Track implements Parcelable {
     private int mId;
@@ -16,6 +20,15 @@ public class Track implements Parcelable {
     private String mArtist;
     private String mAlbumTitle;
     private String mArtworkUrl;
+
+    public Track(JSONObject trackJson) throws JSONException {
+        mId = trackJson.getInt(TrackEntity.ID);
+        mTitle = trackJson.getString(TrackEntity.TITLE);
+        mDuration = trackJson.getInt(TrackEntity.DURATION);
+        mArtist = trackJson.getJSONObject(TrackEntity.KEY_USER).getString(TrackEntity.KEY_USER_USERNAME);
+        mArtworkUrl = trackJson.getString(TrackEntity.ARTWORK_URL);
+        mStreamUrl = StringUtils.initStreamApi(mId);
+    }
 
     public int getId() {
         return mId;

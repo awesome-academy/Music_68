@@ -27,7 +27,8 @@
         android:src="@drawable/ic_search_black_24dp"
         app:layout_constraintBottom_toBottomOf="@+id/text_search"
         app:layout_constraintStart_toStartOf="@+id/text_search"
-        app:layout_constraintTop_toTopOf="@+id/text_search" />
+        app:layout_constraintTop_toTopOf="@+id/text_search"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/text_search"

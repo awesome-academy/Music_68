@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -33,6 +34,7 @@ public class GenresActivity extends BaseActivity implements GenresContract.View 
     private GenresContract.Presenter mPresenter;
     private String mGenreKey;
     private String mGenreApi;
+    private int mOffset;
 
     @Override
     protected int getLayoutResourceId() {
@@ -51,6 +53,7 @@ public class GenresActivity extends BaseActivity implements GenresContract.View 
     }
 
     private void initData() {
+        mOffset = 0;
         mTracks = new ArrayList<>();
         TrackRepository repository = TrackRepository.getInstance(TrackRemoteDataSource.getInstance(),
                 TrackLocalDataSource.getInstance(this));
@@ -58,14 +61,16 @@ public class GenresActivity extends BaseActivity implements GenresContract.View 
         Intent intent = getIntent();
         Genres genres = intent.getParcelableExtra(Constants.EXTRA_GENRES);
         mGenreKey = genres.getKey();
-        mGenreApi = StringUtils.initGenreUrl(mGenreKey, 0);
+        mGenreApi = StringUtils.initGenreUrl(mGenreKey, mOffset);
         mTextGenreName.setText(genres.getName());
         Glide.with(this).load(genres.getPhoto()).centerCrop().into(mGenreImage);
         mPresenter.getTrack(mGenreApi);
     }
 
-    public static Intent getIntent(Context context) {
-        return new Intent(context, GenresActivity.class);
+    public static Intent getIntent(Context context, Genres genre) {
+        Intent intent = new Intent(context, GenresActivity.class);
+        intent.putExtra(Constants.EXTRA_GENRES, genre);
+        return intent;
     }
 
     @Override
